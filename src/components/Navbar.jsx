@@ -1,10 +1,11 @@
 import '../output.css';
 import React from 'react';
+import '../index.css';
 
 function Navbar() {
   return (
     <div className="bg-[#fff8f8] sticky top-0 z-50">
-      <nav className="bg-white shadow-md py-3 px-4 md:px-12 rounded-full mx-auto mt-4 max-w-7xl flex items-center justify-between">
+      <nav className="bg-white shadow-md py-3 px-4 md:px-12 rounded-full mx-auto mt-4 max-w-7xl flex items-center justify-between ">
         {/* Left side: Hamburger + Logo for Mobile */}
         <div className="flex items-center gap-4">
           {/* Hamburger (Mobile only) */}
@@ -32,7 +33,7 @@ function Navbar() {
         </ul>
 
         {/* Login Button (Always Visible) */}
-        <button className="bg-indigo-600  text-white px-5 py-2 rounded-full text-sm font-semibold shadow hover:bg-blue-800 transition">
+        <button className="bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow hover:bg-blue-800 transition">
           Login
         </button>
       </nav>

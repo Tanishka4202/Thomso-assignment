@@ -31,13 +31,14 @@ function Testimonials() {
         What <span className="text-blue-600">Our Clients</span> Say
       </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="flex gap-4 overflow-x-auto px-1 scrollbar-hide">
+
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition"
+            className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition min-w-80"
           >
-            <img src={stars} alt="stars" className="w-24 mb-4" />
+            <img src={stars} alt="stars" className=" mb-4" />
             <p className="text-sm text-gray-700 mb-4">{testimonial.review}</p>
             <div className="flex items-center gap-4 mt-auto">
               <img

@@ -2,6 +2,7 @@ import React from 'react';
 import kf1 from "../assets/kf1.png";
 import kf2 from "../assets/kf2.png";
 import kf3 from "../assets/kf3.png";
+import '../index.css';
 import '../output.css';
 import kf4 from "../assets/kf4.png";
 
@@ -30,29 +31,34 @@ const kfcard = [
 
 function Features() {
   return (
-    <section className="bg-white py-16 px-6 md:px-12">
+    <section className="bg-white py-16 px-6 md:px-12 max-w-6xl mx-auto">
+
       <h3 className="text-2xl md:text-3xl font-semibold text-center mb-10 text-gray-800">
         Key Features
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {kfcard.map((kf, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition"
-          >
-            <img
-              src={kf.image}
-              alt={kf.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h4 className="text-lg font-semibold text-gray-800 mb-1">{kf.title}</h4>
-              <p className="text-sm text-gray-600">{kf.description}</p>
-            </div>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+  {kfcard.map((kf, index) => (
+    <div
+      key={index}
+      className="md:items-center flex-shrink-0 md:min-w-0 bg-white shadow p-2 transition hover:shadow-md "
+    >
+      <img
+        src={kf.image}
+        alt={kf.title}
+        className="w-full h-48"
+      />
+      <div className="p-4">
+        <h4 className="text-lg font-semibold text-gray-800 mb-1">
+          {kf.title}
+        </h4>
+        <p className="text-sm text-gray-600">{kf.description}</p>
       </div>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }
